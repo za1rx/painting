@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Рисование на всей странице</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рисование на странице</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="controls">
-      <label for="brushSize">Толщина кисти:</label>
-      <input type="range" id="brushSize" min="1" max="50" value="10" />
-      <span id="brushValue">10</span>
+        <label for="brushSize">Толщина кисти:</label>
+        <input type="range" id="brushSize" min="1" max="50" value="10">
+        <span id="brushValue">10</span>
 
-      <label for="colorPicker">Цвет кисти:</label>
-      <input type="color" id="colorPicker" value="#000000" />
+        <label for="colorPicker">Цвет кисти:</label>
+        <input type="color" id="colorPicker" value="#000000">
+
+        <button id="clearCanvas">Очистить</button>
     </div>
-
     <canvas id="drawingCanvas"></canvas>
     <script src="main.js"></script>
-  </body>
+</body>
 </html>

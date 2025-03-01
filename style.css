@@ -1,48 +1,63 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    touch-action: none; /* Отключаем скролл при свайпах */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  touch-action: none; /* Отключаем скролл при свайпах */
 }
 
 .controls {
-    position: absolute;
-    z-index: 1;
-    top: -47px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: Arial, sans-serif;
-    border: 10px solid black;
-    border-top: none;
-    cursor: pointer;
-    transition: 0.6s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  top: -47px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+  border: 10px solid black;
+  border-top: none;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
 }
 
 /* Активный класс — панель выезжает вниз */
 .controls__active {
-    top: 10px;
+  top: 10px;
 }
 
-@media(max-width: 994px){
-    .controls{
-        top: -56px;
-    }
+button {
+  padding: 8px 15px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    .controls__active {
-        top: 10px;
-    }
+button:hover {
+  background-color: darkred;
+}
+
+@media (max-width: 994px) {
+  .controls {
+    top: -56px;
+  }
+
+  .controls__active {
+    top: 10px;
+  }
 }

@@ -5,6 +5,7 @@ const controls = document.querySelector(".controls");
 const brushSizeInput = document.getElementById("brushSize");
 const brushValueDisplay = document.getElementById("brushValue");
 const colorPicker = document.getElementById("colorPicker");
+const clearButton = document.getElementById("clearCanvas");
 
 let brushSize = parseInt(brushSizeInput.value);
 let brushColor = colorPicker.value;
@@ -39,6 +40,11 @@ brushSizeInput.addEventListener("input", () => {
 // Изменение цвета кисти
 colorPicker.addEventListener("input", () => {
     brushColor = colorPicker.value;
+});
+
+// Очистка холста
+clearButton.addEventListener("click", () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
 // Переключение панели управления
